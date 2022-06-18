@@ -92,4 +92,5 @@ This is a quick reference to cron syntax and also shows the options supported by
 slack.time(new Date("2022-06-18T05:17:00Z"), "hello World");
 ```
 
-###MIT
+### MIT
+
