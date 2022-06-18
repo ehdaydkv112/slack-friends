@@ -8,6 +8,12 @@ Make it easy to send to Slack from your application
 💡 npm install slack-friends
 ```
 
+## How to get bot token
+1. [https://api.slack.com/](https://api.slack.com/) <br />
+2. Your apps <br />
+3. Create New App <br />
+4. OAuth & Permissions - Bot User OAuth Token <br />
+
 ## Usage
 
 ```tsx
@@ -28,6 +34,7 @@ slack.send("hello world");
 ```
 
 ### Custom Message
+Please refer to the detail to build Custom Message
 https://app.slack.com/block-kit-builder/
 
 ```tsx
@@ -77,12 +84,3 @@ This is a quick reference to cron syntax and also shows the options supported by
 ```tsx
 slack.time(new Date("2022-06-18T05:17:00Z"), "hello World");
 ```
-
-------
-
-## Detail
-### How to get token
-1. [https://api.slack.com/](https://api.slack.com/) <br />
-2. Your apps <br />
-3. Create New App <br />
-4. OAuth & Permissions - Bot User OAuth Token <br />
