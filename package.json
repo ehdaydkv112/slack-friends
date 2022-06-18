@@ -1,6 +1,6 @@
 {
   "name": "slack-friends",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "slack-friends good",
   "main": "lib/index.js",
   "types": "src/index.ts",
@@ -10,7 +10,12 @@
   },
   "keywords": ["slack-friends", "slack", "cron", "slack-cron", "message"],
   "author": "",
-  "license": "ISC",
+  "repository": {
+    "type":"git",
+    "url":  "https://github.com/ehdaydkv112/slack-friends"
+  },
+  "homepage": "https://github.com/ehdaydkv112/slack-friends#readme",
+  "license": "MIT",
   "dependencies": {
     "@types/node-cron": "^3.0.1",
     "axios": "^0.27.2",
