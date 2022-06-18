@@ -13,6 +13,13 @@ Make it easy to send to Slack from your application
 2. Your apps <br />
 3. Create New App <br />
 4. OAuth & Permissions - Bot User OAuth Token <br />
+```
+Bot Token scopes 
+  * channels:join
+  * channels:read
+  * chat:write
+```
+
 
 ## Usage
 
@@ -25,7 +32,7 @@ const slack = new SlackFriends({
 });
 ```
 
-- `token` : Please refer to the detail to issue the token
+- `token` : Please refer to 'How to get bot token' to issue the token
 - `channel` : write channel name  eg) #channelName -> remove `#` and only use `channelName`
 
 ### Common Message
