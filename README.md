@@ -3,7 +3,7 @@
 <br />
 
 ```javascript
-💡 npm install slack-friend
+💡 npm install slack-friends
 ```
 
 ------
