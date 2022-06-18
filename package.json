@@ -1,0 +1,23 @@
+{
+  "name": "slack-friends",
+  "version": "0.0.9",
+  "description": "slack-friends good",
+  "main": "lib/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build"
+  },
+  "keywords": ["slack-friends", "slack", "cron", "slack-cron", "message"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-cron": "^3.0.1",
+    "axios": "^0.27.2",
+    "node-cron": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
