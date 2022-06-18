@@ -1,22 +1,26 @@
-# slack-friend
+# slack-friends
 
-<br />
+Make it easy to send to Slack from your application
+
+## Installation
 
 ```javascript
 💡 npm install slack-friends
 ```
 
-------
+## Usage
 
 ```tsx
-import slackFriend from "slack-friends";
-import 'dotenv/config';
+import { SlackFriends } from "slack-friends";
 
-const slack = new slackFriend({
-  token: process.env.token,
-  channel: "channelName",
+const slack = new SlackFriends({
+  token: "Your Bot Token",
+  channel: "Channel Name",
 });
 ```
+
+- `token` : Please refer to the detail to issue the token
+- `channel` : write channel name  eg) #channelName -> remove `#` and only use `channelName`
 
 ### Common Message
 ```tsx
@@ -36,7 +40,7 @@ const customMessage = {
         "text": "This is a section block with a button."
       },
       "accessory": {
-        "type": "button",+
+        "type": "button",
         "text": {
           "type": "plain_text",
           "text": "Click Me",
@@ -56,6 +60,18 @@ slack.send(customMessage);
 ```tsx
 slack.cron("* * * * *", "hello World");
 ```
+```
+ # ┌────────────── second (optional)
+ # │ ┌──────────── minute
+ # │ │ ┌────────── hour
+ # │ │ │ ┌──────── day of month
+ # │ │ │ │ ┌────── month
+ # │ │ │ │ │ ┌──── day of week
+ # │ │ │ │ │ │
+ # │ │ │ │ │ │
+ # * * * * * *
+```
+This is a quick reference to cron syntax and also shows the options supported by node-cron.
 
 ### Schedule Message
 ```tsx
