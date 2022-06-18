@@ -13,41 +13,43 @@ import slackFriend from "slack-friends";
 import 'dotenv/config';
 
 const slack = new slackFriend({
-	token: process.env.token,
-	channel: "testChannel",
+  token: process.env.token,
+  channel: "testChannel",
 });
 
-// Only Text
+// Common Message
 slack.send("hello world");
 
 // Custom Message
 // https://app.slack.com/block-kit-builder/
-slack.send({
-	"blocks": [
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "This is a section block with a button."
-			},
-			"accessory": {
-				"type": "button",
-				"text": {
-					"type": "plain_text",
-					"text": "Click Me",
-					"emoji": true
-				},
-				"value": "click_me_123",
-				"action_id": "button-action"
-			}
-		}
-	]
-});
+const customMessage = {
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "This is a section block with a button."
+      },
+      "accessory": {
+        "type": "button",+
+        "text": {
+          "type": "plain_text",
+          "text": "Click Me",
+          "emoji": true
+        },
+        "value": "click_me_123",
+        "action_id": "button-action"
+      }
+    }
+  ]
+}
 
-// Cron
+slack.send(customMessage);
+
+// Cron Message
 slack.cron("* * * * *", "hello World");
 
-// Schedule
+// Schedule Message
 slack.time(new Date("2022-06-18T05:17:00Z"), "hello World");
 ```
 
